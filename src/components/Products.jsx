@@ -8,8 +8,6 @@ import { db } from "../firebase";
 function Products() {
     const [products, setProducts] = useState([]);
 
-
-
     const productsRef = collection(db, 'products');
 
     const getProducts = async () => {
