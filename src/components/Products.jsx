@@ -26,7 +26,6 @@ function Products() {
         }
     }
     useEffect(() => {
-        console.log('rn')
         getProducts()
     }, [])
 
