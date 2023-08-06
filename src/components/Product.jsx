@@ -20,6 +20,7 @@ function Product(props) {
                 } else if (type === 'inc') {
                     const increasedQuantity = productDoc.data().quantity + 1;
                     transaction.update(productRef, { quantity: increasedQuantity })
+
                 }
             })
 
