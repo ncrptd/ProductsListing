@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
 import {
     collection,
-    onSnapshot,
+    onSnapshot
 } from 'firebase/firestore'
 import { db } from "../firebase";
 import Product from "./Product";
 
 function Products() {
     const [products, setProducts] = useState([]);
+
     const productsRef = collection(db, 'products');
 
     const getProducts = async () => {
@@ -28,8 +29,8 @@ function Products() {
     }, [])
 
     return (
-        <div className="mt-4">
-            {products.map((product) => <Product key={product.id} product={product} />)}
+        <div>
+            {products.map((product) => <Product key={product?.id} product={product} />)}
         </div>
     )
 }
